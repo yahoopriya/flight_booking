@@ -22,6 +22,8 @@ import org.testng.annotations.Parameters;
 
 import com.epam.cleartrip.utility.JsonDataReader;
 
+import cucumber.api.java.Before;
+
 public class BaseUtilityClearTrip {
     
 	protected static WebDriver driver = null;
@@ -34,7 +36,7 @@ public class BaseUtilityClearTrip {
 	}
 
 	@Parameters({ "browserType" })
-	@BeforeTest
+	@BeforeTest	
 	public void selectBrowser(String browserType) {		
 		switch (browserType) {
 		
